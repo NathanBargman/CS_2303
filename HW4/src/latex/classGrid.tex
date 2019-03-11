@@ -1,0 +1,237 @@
+\section{Grid Class Reference}
+\label{classGrid}\index{Grid@{Grid}}
+
+
+{\ttfamily \#include $<$Grid.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Grid} ()
+\item 
+\textbf{ Grid} (int n\+Squares\+On\+A\+Side)
+\item 
+bool \textbf{ set\+Cell\+Occupant} (int r, int c, \textbf{ occupation\+Status} g, \textbf{ Organism} $\ast$ptr)
+\item 
+bool \textbf{ remove\+Cell\+Occupant} (int r, int c)
+\item 
+\textbf{ occupation\+Status} \textbf{ get\+Cell\+Occupant} (int r, int c)
+\item 
+\textbf{ Organism} $\ast$ \textbf{ get\+Cell\+Pointer} (int r, int c)
+\item 
+int \textbf{ find\+Adj\+With\+Status} (int r, int c, \textbf{ occupation\+Status} g)
+\item 
+void \textbf{ print\+Grid} ()
+\item 
+virtual \textbf{ $\sim$\+Grid} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Cell} $\ast$$\ast$ \textbf{ grid}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classGrid_a4ac9ff4f63552b4c61ff90fcb35ad66c}} 
+\index{Grid@{Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!Grid@{Grid}}
+\subsubsection{Grid()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Grid\+::\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This is the default constructor \begin{DoxyReturn}{Returns}
+a grid with a null ptr 
+\end{DoxyReturn}
+
+
+References grid.
+
+\mbox{\label{classGrid_af35b0accda3471400d55eae5ea07cd40}} 
+\index{Grid@{Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!Grid@{Grid}}
+\subsubsection{Grid()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Grid\+::\+Grid (\begin{DoxyParamCaption}\item[{int}]{n\+Squares\+On\+A\+Side }\end{DoxyParamCaption})}
+
+\doxyref{Grid}{p.}{classGrid} Constructor 
+\begin{DoxyParams}{Parameters}
+{\em the} & size of 1 side of the grid (it is a square) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a grid of the given size 
+\end{DoxyReturn}
+
+
+References grid, and n.
+
+\mbox{\label{classGrid_a3661d0a7f998caaaf8627d7a67072116}} 
+\index{Grid@{Grid}!````~Grid@{$\sim$\+Grid}}
+\index{````~Grid@{$\sim$\+Grid}!Grid@{Grid}}
+\subsubsection{$\sim$\+Grid()}
+{\footnotesize\ttfamily Grid\+::$\sim$\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructer Receives and outputs nothing 
+
+References grid, n, and Cell\+::$\sim$\+Cell().
+
+
+
+Referenced by Tests2\+::ants\+Breed\+Test(), Tests2\+::ants\+Die\+From\+Doodle\+Eat\+Test(), Tests2\+::ants\+Move\+Test(), Tests2\+::doodle\+Breed\+Test(), Tests2\+::doodle\+Dietest(), Tests2\+::doodle\+Move\+Test(), Tests2\+::grid\+Test(), Tests2\+::make\+Organism\+Test(), and Production\+::run\+Production().
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classGrid_a3c1841dc511b574bd0cd560a95987000}} 
+\index{Grid@{Grid}!find\+Adj\+With\+Status@{find\+Adj\+With\+Status}}
+\index{find\+Adj\+With\+Status@{find\+Adj\+With\+Status}!Grid@{Grid}}
+\subsubsection{find\+Adj\+With\+Status()}
+{\footnotesize\ttfamily int Grid\+::find\+Adj\+With\+Status (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c,  }\item[{\textbf{ occupation\+Status}}]{g }\end{DoxyParamCaption})}
+
+Finds adjacent cell to move into 
+\begin{DoxyParams}{Parameters}
+{\em int} & r, The given x position \\
+\hline
+{\em in} & c, The given y position \\
+\hline
+{\em occupation\+Status} & g, The occupant of the cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the adjacent cell is above, 1 if the cell is below, 2 if the cell is to the right, and 3 if the cell is to the left. 
+\end{DoxyReturn}
+
+
+References get\+Cell\+Occupant().
+
+
+
+Referenced by Ant\+::breed(), Doodlebug\+::breed(), Doodlebug\+::eat(), Doodlebug\+::move(), and Ant\+::move().
+
+\mbox{\label{classGrid_ae9f685fddd449805e372d59cfa6c42d6}} 
+\index{Grid@{Grid}!get\+Cell\+Occupant@{get\+Cell\+Occupant}}
+\index{get\+Cell\+Occupant@{get\+Cell\+Occupant}!Grid@{Grid}}
+\subsubsection{get\+Cell\+Occupant()}
+{\footnotesize\ttfamily \textbf{ occupation\+Status} Grid\+::get\+Cell\+Occupant (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+Gets the occupation status of a cell 
+\begin{DoxyParams}{Parameters}
+{\em int} & r, the given x position \\
+\hline
+{\em int} & c, the given y position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the occupation\+Status of the given position 
+\end{DoxyReturn}
+
+
+References edge, Cell\+::get\+Occupant(), grid, and n.
+
+
+
+Referenced by Tests2\+::ants\+Breed\+Test(), Tests2\+::ants\+Die\+From\+Doodle\+Eat\+Test(), Tests2\+::ants\+Move\+Test(), Tests2\+::doodle\+Breed\+Test(), Tests2\+::doodle\+Dietest(), Tests2\+::doodle\+Move\+Test(), find\+Adj\+With\+Status(), Tests2\+::grid\+Test(), Tests2\+::make\+Organism\+Test(), and Production\+::run\+Production().
+
+\mbox{\label{classGrid_a9927cd6c838697c650a2e7575a0732de}} 
+\index{Grid@{Grid}!get\+Cell\+Pointer@{get\+Cell\+Pointer}}
+\index{get\+Cell\+Pointer@{get\+Cell\+Pointer}!Grid@{Grid}}
+\subsubsection{get\+Cell\+Pointer()}
+{\footnotesize\ttfamily \textbf{ Organism} $\ast$ Grid\+::get\+Cell\+Pointer (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+Return the pointer to a cell 
+\begin{DoxyParams}{Parameters}
+{\em int} & r, the given x position \\
+\hline
+{\em int} & c, the given y position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the cell on the grid 
+\end{DoxyReturn}
+
+
+References Cell\+::get\+Org(), and grid.
+
+
+
+Referenced by Production\+::run\+Production().
+
+\mbox{\label{classGrid_a04601ea9795a6928190e64fa89f10499}} 
+\index{Grid@{Grid}!print\+Grid@{print\+Grid}}
+\index{print\+Grid@{print\+Grid}!Grid@{Grid}}
+\subsubsection{print\+Grid()}
+{\footnotesize\ttfamily void Grid\+::print\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints the grid, Ants are O, Doodlebugs are X 
+
+References ant, doodlebug, empty, Cell\+::get\+Occupant(), grid, and n.
+
+
+
+Referenced by Production\+::run\+Production().
+
+\mbox{\label{classGrid_aa0a705944660b62ecccf7629695525f3}} 
+\index{Grid@{Grid}!remove\+Cell\+Occupant@{remove\+Cell\+Occupant}}
+\index{remove\+Cell\+Occupant@{remove\+Cell\+Occupant}!Grid@{Grid}}
+\subsubsection{remove\+Cell\+Occupant()}
+{\footnotesize\ttfamily bool Grid\+::remove\+Cell\+Occupant (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+Removes an occupant from a cell 
+\begin{DoxyParams}{Parameters}
+{\em int} & r, the given x position \\
+\hline
+{\em int} & c, the given y position return Whether or not the occupant was removed \\
+\hline
+\end{DoxyParams}
+
+
+References empty, grid, and Cell\+::set\+Occupant().
+
+
+
+Referenced by Doodlebug\+::die(), Doodlebug\+::eat(), Ant\+::move(), and Doodlebug\+::move().
+
+\mbox{\label{classGrid_a22ed767db41cdf4673e6a335b06997c1}} 
+\index{Grid@{Grid}!set\+Cell\+Occupant@{set\+Cell\+Occupant}}
+\index{set\+Cell\+Occupant@{set\+Cell\+Occupant}!Grid@{Grid}}
+\subsubsection{set\+Cell\+Occupant()}
+{\footnotesize\ttfamily bool Grid\+::set\+Cell\+Occupant (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c,  }\item[{\textbf{ occupation\+Status}}]{g,  }\item[{\textbf{ Organism} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Sets the tag of a certain cell to a specific organism 
+\begin{DoxyParams}{Parameters}
+{\em int} & r, the given x position \\
+\hline
+{\em int} & c, the given y position \\
+\hline
+{\em occupation\+Status} & g, the occupation\+Status tag of the organism \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the occupant was set 
+\end{DoxyReturn}
+
+
+References grid, and Cell\+::set\+Occupant().
+
+
+
+Referenced by Ant\+::breed(), Doodlebug\+::breed(), Doodlebug\+::eat(), Tests2\+::grid\+Test(), Doodlebug\+::move(), Ant\+::move(), Doodlebug\+::set\+Pos(), and Ant\+::set\+Pos().
+
+
+
+\subsection{Field Documentation}
+\mbox{\label{classGrid_aed7af8677f599b6ea1b625b7065d9150}} 
+\index{Grid@{Grid}!grid@{grid}}
+\index{grid@{grid}!Grid@{Grid}}
+\subsubsection{grid}
+{\footnotesize\ttfamily \textbf{ Cell}$\ast$$\ast$ Grid\+::grid\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by get\+Cell\+Occupant(), get\+Cell\+Pointer(), Grid(), print\+Grid(), remove\+Cell\+Occupant(), set\+Cell\+Occupant(), and $\sim$\+Grid().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Grid.\+h}\item 
+\textbf{ Grid.\+cpp}\end{DoxyCompactItemize}

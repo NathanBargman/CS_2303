@@ -1,0 +1,117 @@
+\section{Organism Class Reference}
+\label{classOrganism}\index{Organism@{Organism}}
+
+
+{\ttfamily \#include $<$Organism.\+h$>$}
+
+Inheritance diagram for Organism\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classOrganism}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Organism} ()
+\item 
+\textbf{ Organism} (bool b)
+\item 
+bool \textbf{ is\+Prey} ()
+\item 
+void \textbf{ set\+Am\+Ant} (bool b)
+\item 
+virtual \textbf{ $\sim$\+Organism} ()
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ visited} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classOrganism_aeb16ee24b64839584b4862384d0b53fe}} 
+\index{Organism@{Organism}!Organism@{Organism}}
+\index{Organism@{Organism}!Organism@{Organism}}
+\subsubsection{Organism()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Organism\+::\+Organism (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This is the default constructor It has no parameters and returns nothing \mbox{\label{classOrganism_ac7d3dbebaf5df39d0a7883b2d76b4868}} 
+\index{Organism@{Organism}!Organism@{Organism}}
+\index{Organism@{Organism}!Organism@{Organism}}
+\subsubsection{Organism()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Organism\+::\+Organism (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em bool} & b, if the organism is an ant or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an organism with the requested value 
+\end{DoxyReturn}
+
+
+References am\+Ant.
+
+\mbox{\label{classOrganism_aa5aa2e9fc3134358c929fa0c9d230c3b}} 
+\index{Organism@{Organism}!````~Organism@{$\sim$\+Organism}}
+\index{````~Organism@{$\sim$\+Organism}!Organism@{Organism}}
+\subsubsection{$\sim$\+Organism()}
+{\footnotesize\ttfamily Organism\+::$\sim$\+Organism (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructer Receives and outputs nothing 
+
+\subsection{Member Function Documentation}
+\mbox{\label{classOrganism_aa5213b2e2b0c4f227dc7dfc4c4ab411c}} 
+\index{Organism@{Organism}!is\+Prey@{is\+Prey}}
+\index{is\+Prey@{is\+Prey}!Organism@{Organism}}
+\subsubsection{is\+Prey()}
+{\footnotesize\ttfamily bool Organism\+::is\+Prey (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks to see if this object is an A\+NT (does not check to see if this is an actual A\+NT object) \begin{DoxyReturn}{Returns}
+bool, true if it is an A\+NT otherwise false 
+\end{DoxyReturn}
+
+
+References am\+Ant.
+
+
+
+Referenced by Cell\+::\+Cell().
+
+\mbox{\label{classOrganism_aba68f4745f6b0938cf157dcd27df1868}} 
+\index{Organism@{Organism}!set\+Am\+Ant@{set\+Am\+Ant}}
+\index{set\+Am\+Ant@{set\+Am\+Ant}!Organism@{Organism}}
+\subsubsection{set\+Am\+Ant()}
+{\footnotesize\ttfamily void Organism\+::set\+Am\+Ant (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
+
+Sets this object to an A\+NT or not an A\+NT (not an ant object) 
+\begin{DoxyParams}{Parameters}
+{\em bool} & b, the desired condition \\
+\hline
+\end{DoxyParams}
+
+
+References am\+Ant.
+
+
+
+\subsection{Field Documentation}
+\mbox{\label{classOrganism_a93bc3f6f4480a52e61161f033e62a218}} 
+\index{Organism@{Organism}!visited@{visited}}
+\index{visited@{visited}!Organism@{Organism}}
+\subsubsection{visited}
+{\footnotesize\ttfamily bool Organism\+::visited = false}
+
+
+
+Referenced by Doodlebug\+::eat(), Ant\+::move(), and Production\+::run\+Production().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Organism.\+h}\item 
+\textbf{ Organism.\+cpp}\end{DoxyCompactItemize}

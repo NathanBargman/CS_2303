@@ -1,0 +1,164 @@
+\section{Ant Class Reference}
+\label{classAnt}\index{Ant@{Ant}}
+
+
+{\ttfamily \#include $<$Ant.\+h$>$}
+
+Inheritance diagram for Ant\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAnt}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ant} ()
+\item 
+\textbf{ Ant} (int r, int c)
+\item 
+void \textbf{ set\+Pos} (int r, int c, \textbf{ Grid} $\ast$grid)
+\item 
+bool \textbf{ move} (\textbf{ Grid} $\ast$grid)
+\item 
+bool \textbf{ breed} (\textbf{ Grid} $\ast$grid)
+\item 
+\textbf{ $\sim$\+Ant} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ row} = 0
+\item 
+int \textbf{ col} = 0
+\item 
+int \textbf{ movesteps} = 0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classAnt_ad6c1a8f70419877f7a3e2c9c557f913d}} 
+\index{Ant@{Ant}!Ant@{Ant}}
+\index{Ant@{Ant}!Ant@{Ant}}
+\subsubsection{Ant()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ant\+::\+Ant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This is the default constructor It has no parameters and returns nothing 
+
+Referenced by breed().
+
+\mbox{\label{classAnt_aa92b218513230e9cbf060f70dd3f724a}} 
+\index{Ant@{Ant}!Ant@{Ant}}
+\index{Ant@{Ant}!Ant@{Ant}}
+\subsubsection{Ant()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ant\+::\+Ant (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+Constructor of the A\+NT class 
+\begin{DoxyParams}{Parameters}
+{\em r,the} & staring x position \\
+\hline
+{\em c,the} & starting y position \\
+\hline
+\end{DoxyParams}
+
+
+References col, and row.
+
+\mbox{\label{classAnt_a33ca6bd592236726a18a2159908e4116}} 
+\index{Ant@{Ant}!````~Ant@{$\sim$\+Ant}}
+\index{````~Ant@{$\sim$\+Ant}!Ant@{Ant}}
+\subsubsection{$\sim$\+Ant()}
+{\footnotesize\ttfamily Ant\+::$\sim$\+Ant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructer Receives and outputs nothing 
+
+\subsection{Member Function Documentation}
+\mbox{\label{classAnt_af899faded61186f5ca27e43cee1463ba}} 
+\index{Ant@{Ant}!breed@{breed}}
+\index{breed@{breed}!Ant@{Ant}}
+\subsubsection{breed()}
+{\footnotesize\ttfamily bool Ant\+::breed (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{grid }\end{DoxyParamCaption})}
+
+
+
+References ant, Ant(), col, empty, Grid\+::find\+Adj\+With\+Status(), movesteps, row, Grid\+::set\+Cell\+Occupant(), and set\+Pos().
+
+
+
+Referenced by Tests2\+::ants\+Breed\+Test(), and Production\+::run\+Production().
+
+\mbox{\label{classAnt_a10d7a628d2459776b19d363a1fbf6dd9}} 
+\index{Ant@{Ant}!move@{move}}
+\index{move@{move}!Ant@{Ant}}
+\subsubsection{move()}
+{\footnotesize\ttfamily bool Ant\+::move (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{grid }\end{DoxyParamCaption})}
+
+
+
+References ant, col, empty, Grid\+::find\+Adj\+With\+Status(), movesteps, Grid\+::remove\+Cell\+Occupant(), row, Grid\+::set\+Cell\+Occupant(), and Organism\+::visited.
+
+
+
+Referenced by Tests2\+::ants\+Breed\+Test(), Tests2\+::ants\+Move\+Test(), and Production\+::run\+Production().
+
+\mbox{\label{classAnt_a01098e2ff950739797f518b9fbeb3993}} 
+\index{Ant@{Ant}!set\+Pos@{set\+Pos}}
+\index{set\+Pos@{set\+Pos}!Ant@{Ant}}
+\subsubsection{set\+Pos()}
+{\footnotesize\ttfamily void Ant\+::set\+Pos (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c,  }\item[{\textbf{ Grid} $\ast$}]{grid }\end{DoxyParamCaption})}
+
+This sets the x and y position of the object 
+\begin{DoxyParams}{Parameters}
+{\em int} & r, y position \\
+\hline
+{\em int} & c, x position \\
+\hline
+\end{DoxyParams}
+
+
+References ant, col, row, and Grid\+::set\+Cell\+Occupant().
+
+
+
+Referenced by Tests2\+::ants\+Breed\+Test(), Tests2\+::ants\+Die\+From\+Doodle\+Eat\+Test(), Tests2\+::ants\+Move\+Test(), breed(), Tests2\+::make\+Organism\+Test(), and Production\+::run\+Production().
+
+
+
+\subsection{Field Documentation}
+\mbox{\label{classAnt_afe21bedec87ea26e3db74857960a78c6}} 
+\index{Ant@{Ant}!col@{col}}
+\index{col@{col}!Ant@{Ant}}
+\subsubsection{col}
+{\footnotesize\ttfamily int Ant\+::col = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Ant(), breed(), move(), and set\+Pos().
+
+\mbox{\label{classAnt_a15f73cd5012242c89bc2ce5608adde3c}} 
+\index{Ant@{Ant}!movesteps@{movesteps}}
+\index{movesteps@{movesteps}!Ant@{Ant}}
+\subsubsection{movesteps}
+{\footnotesize\ttfamily int Ant\+::movesteps = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by breed(), and move().
+
+\mbox{\label{classAnt_abf712c4a02e999938c7d79557a8fc24b}} 
+\index{Ant@{Ant}!row@{row}}
+\index{row@{row}!Ant@{Ant}}
+\subsubsection{row}
+{\footnotesize\ttfamily int Ant\+::row = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Ant(), breed(), move(), and set\+Pos().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ant.\+h}\item 
+\textbf{ Ant.\+cpp}\end{DoxyCompactItemize}

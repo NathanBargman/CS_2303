@@ -1,0 +1,142 @@
+\section{Cell Class Reference}
+\label{classCell}\index{Cell@{Cell}}
+
+
+{\ttfamily \#include $<$Cell.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Cell} ()
+\item 
+\textbf{ Cell} (\textbf{ Organism} $\ast$ptr)
+\item 
+bool \textbf{ set\+Occupant} (\textbf{ occupation\+Status} g, \textbf{ Organism} $\ast$ptr)
+\item 
+\textbf{ occupation\+Status} \textbf{ get\+Occupant} ()
+\item 
+\textbf{ Organism} $\ast$ \textbf{ get\+Org} ()
+\item 
+virtual \textbf{ $\sim$\+Cell} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Organism} $\ast$ \textbf{ org}
+\item 
+\textbf{ occupation\+Status} \textbf{ guest}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classCell_a394510643e8664cf12b5efaf5cb99f71}} 
+\index{Cell@{Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell@{Cell}}
+\subsubsection{Cell()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cell\+::\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This is the default constructor \begin{DoxyReturn}{Returns}
+an empty cell object 
+\end{DoxyReturn}
+
+
+References empty, guest, and org.
+
+\mbox{\label{classCell_a91d4d12d7c64617c7a266e0c8c56a4cd}} 
+\index{Cell@{Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell@{Cell}}
+\subsubsection{Cell()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cell\+::\+Cell (\begin{DoxyParamCaption}\item[{\textbf{ Organism} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+References ant, doodlebug, guest, Organism\+::is\+Prey(), and org.
+
+\mbox{\label{classCell_a9fa559f7a28e2b4336c6879ca09304d8}} 
+\index{Cell@{Cell}!````~Cell@{$\sim$\+Cell}}
+\index{````~Cell@{$\sim$\+Cell}!Cell@{Cell}}
+\subsubsection{$\sim$\+Cell()}
+{\footnotesize\ttfamily Cell\+::$\sim$\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructer Receives and outputs nothing 
+
+References org.
+
+
+
+Referenced by Grid\+::$\sim$\+Grid().
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classCell_a7dcb8bc75a2e2591b3fd52b5f7c28ab1}} 
+\index{Cell@{Cell}!get\+Occupant@{get\+Occupant}}
+\index{get\+Occupant@{get\+Occupant}!Cell@{Cell}}
+\subsubsection{get\+Occupant()}
+{\footnotesize\ttfamily \textbf{ occupation\+Status} Cell\+::get\+Occupant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+References guest.
+
+
+
+Referenced by Grid\+::get\+Cell\+Occupant(), and Grid\+::print\+Grid().
+
+\mbox{\label{classCell_ae2d42272066779d88a0e9b7306eeecb3}} 
+\index{Cell@{Cell}!get\+Org@{get\+Org}}
+\index{get\+Org@{get\+Org}!Cell@{Cell}}
+\subsubsection{get\+Org()}
+{\footnotesize\ttfamily \textbf{ Organism} $\ast$ Cell\+::get\+Org (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+References org.
+
+
+
+Referenced by Grid\+::get\+Cell\+Pointer().
+
+\mbox{\label{classCell_adbfb64113686df0deb3958a8aba9dd2b}} 
+\index{Cell@{Cell}!set\+Occupant@{set\+Occupant}}
+\index{set\+Occupant@{set\+Occupant}!Cell@{Cell}}
+\subsubsection{set\+Occupant()}
+{\footnotesize\ttfamily bool Cell\+::set\+Occupant (\begin{DoxyParamCaption}\item[{\textbf{ occupation\+Status}}]{g,  }\item[{\textbf{ Organism} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+References guest, and org.
+
+
+
+Referenced by Grid\+::remove\+Cell\+Occupant(), and Grid\+::set\+Cell\+Occupant().
+
+
+
+\subsection{Field Documentation}
+\mbox{\label{classCell_aafc273a5125cf29742a8df6f5a5a881c}} 
+\index{Cell@{Cell}!guest@{guest}}
+\index{guest@{guest}!Cell@{Cell}}
+\subsubsection{guest}
+{\footnotesize\ttfamily \textbf{ occupation\+Status} Cell\+::guest\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Cell(), get\+Occupant(), and set\+Occupant().
+
+\mbox{\label{classCell_acbab180cc71423ae9ebe9c39ea4c8945}} 
+\index{Cell@{Cell}!org@{org}}
+\index{org@{org}!Cell@{Cell}}
+\subsubsection{org}
+{\footnotesize\ttfamily \textbf{ Organism}$\ast$ Cell\+::org\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Cell(), get\+Org(), set\+Occupant(), and $\sim$\+Cell().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Cell.\+h}\item 
+\textbf{ Cell.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,208 @@
+\section{Tests2 Class Reference}
+\label{classTests2}\index{Tests2@{Tests2}}
+
+
+{\ttfamily \#include $<$Tests2.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Tests2} ()
+\item 
+bool \textbf{ do\+Tests} ()
+\item 
+bool \textbf{ grid\+Test} ()
+\item 
+bool \textbf{ make\+Organism\+Test} ()
+\item 
+bool \textbf{ ants\+Move\+Test} ()
+\item 
+bool \textbf{ ants\+Breed\+Test} ()
+\item 
+bool \textbf{ ants\+Die\+From\+Doodle\+Eat\+Test} ()
+\item 
+bool \textbf{ doodle\+Move\+Test} ()
+\item 
+bool \textbf{ doodle\+Breed\+Test} ()
+\item 
+bool \textbf{ doodle\+Dietest} ()
+\item 
+virtual \textbf{ $\sim$\+Tests2} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classTests2_a6d7d8d248dd3d544199769baa1face60}} 
+\index{Tests2@{Tests2}!Tests2@{Tests2}}
+\index{Tests2@{Tests2}!Tests2@{Tests2}}
+\subsubsection{Tests2()}
+{\footnotesize\ttfamily Tests2\+::\+Tests2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Basic \doxyref{Tests2}{p.}{classTests2} constructor Receives and outputs nothing \mbox{\label{classTests2_abed1a850ef511b7c06ae418cb3bbd5d9}} 
+\index{Tests2@{Tests2}!````~Tests2@{$\sim$\+Tests2}}
+\index{````~Tests2@{$\sim$\+Tests2}!Tests2@{Tests2}}
+\subsubsection{$\sim$\+Tests2()}
+{\footnotesize\ttfamily Tests2\+::$\sim$\+Tests2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructer Receives and outputs nothing 
+
+\subsection{Member Function Documentation}
+\mbox{\label{classTests2_a21e7692afbdfb694caf370670cbeb7d4}} 
+\index{Tests2@{Tests2}!ants\+Breed\+Test@{ants\+Breed\+Test}}
+\index{ants\+Breed\+Test@{ants\+Breed\+Test}!Tests2@{Tests2}}
+\subsubsection{ants\+Breed\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::ants\+Breed\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests to make sure the A\+NT breed function is working properly \begin{DoxyReturn}{Returns}
+bool, whether the function runs as expected 
+\end{DoxyReturn}
+
+
+References ant, Ant\+::breed(), Grid\+::get\+Cell\+Occupant(), Ant\+::move(), Ant\+::set\+Pos(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_afe19a293e1f0d8ece90e1ab95002b5dd}} 
+\index{Tests2@{Tests2}!ants\+Die\+From\+Doodle\+Eat\+Test@{ants\+Die\+From\+Doodle\+Eat\+Test}}
+\index{ants\+Die\+From\+Doodle\+Eat\+Test@{ants\+Die\+From\+Doodle\+Eat\+Test}!Tests2@{Tests2}}
+\subsubsection{ants\+Die\+From\+Doodle\+Eat\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::ants\+Die\+From\+Doodle\+Eat\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests to make sure the A\+NT die function is working properly \begin{DoxyReturn}{Returns}
+bool, whether the function runs as expected 
+\end{DoxyReturn}
+
+
+References doodlebug, Doodlebug\+::eat(), Grid\+::get\+Cell\+Occupant(), Doodlebug\+::set\+Pos(), Ant\+::set\+Pos(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a7694d2797eba6fadc40234d527f6afbe}} 
+\index{Tests2@{Tests2}!ants\+Move\+Test@{ants\+Move\+Test}}
+\index{ants\+Move\+Test@{ants\+Move\+Test}!Tests2@{Tests2}}
+\subsubsection{ants\+Move\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::ants\+Move\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests to make sure the A\+NT move function is working properly \begin{DoxyReturn}{Returns}
+bool, whether the function runs as expected 
+\end{DoxyReturn}
+
+
+References empty, Grid\+::get\+Cell\+Occupant(), Ant\+::move(), Ant\+::set\+Pos(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a317dc926bf93038f188c999df7a85682}} 
+\index{Tests2@{Tests2}!doodle\+Breed\+Test@{doodle\+Breed\+Test}}
+\index{doodle\+Breed\+Test@{doodle\+Breed\+Test}!Tests2@{Tests2}}
+\subsubsection{doodle\+Breed\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::doodle\+Breed\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests to make sure the Doodle breed function is working properly \begin{DoxyReturn}{Returns}
+bool, whether the function runs as expected 
+\end{DoxyReturn}
+
+
+References Doodlebug\+::breed(), doodlebug, Doodlebug\+::eat(), Grid\+::get\+Cell\+Occupant(), Doodlebug\+::move(), Doodlebug\+::set\+Pos(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_aaf403f9bb7338771173e2053ea4f95fc}} 
+\index{Tests2@{Tests2}!doodle\+Dietest@{doodle\+Dietest}}
+\index{doodle\+Dietest@{doodle\+Dietest}!Tests2@{Tests2}}
+\subsubsection{doodle\+Dietest()}
+{\footnotesize\ttfamily bool Tests2\+::doodle\+Dietest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests to make sure the Doodle die function is working properly \begin{DoxyReturn}{Returns}
+bool, whether the function runs as expected 
+\end{DoxyReturn}
+
+
+References Doodlebug\+::die(), doodlebug, Doodlebug\+::eat(), Grid\+::get\+Cell\+Occupant(), Doodlebug\+::move(), Doodlebug\+::set\+Pos(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a2143f2192836626e7214d37b504df381}} 
+\index{Tests2@{Tests2}!doodle\+Move\+Test@{doodle\+Move\+Test}}
+\index{doodle\+Move\+Test@{doodle\+Move\+Test}!Tests2@{Tests2}}
+\subsubsection{doodle\+Move\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::doodle\+Move\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests to make sure the Doodle move function is working properly \begin{DoxyReturn}{Returns}
+bool, whether the function runs as expected 
+\end{DoxyReturn}
+
+
+References empty, Grid\+::get\+Cell\+Occupant(), Doodlebug\+::move(), Doodlebug\+::set\+Pos(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a7392382310966597d685c8aa3a4a2f88}} 
+\index{Tests2@{Tests2}!do\+Tests@{do\+Tests}}
+\index{do\+Tests@{do\+Tests}!Tests2@{Tests2}}
+\subsubsection{do\+Tests()}
+{\footnotesize\ttfamily bool Tests2\+::do\+Tests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests the program \begin{DoxyReturn}{Returns}
+bool, whether the function ran as expected 
+\end{DoxyReturn}
+
+
+References ants\+Breed\+Test(), ants\+Die\+From\+Doodle\+Eat\+Test(), ants\+Move\+Test(), doodle\+Breed\+Test(), doodle\+Dietest(), doodle\+Move\+Test(), grid\+Test(), and make\+Organism\+Test().
+
+
+
+Referenced by main().
+
+\mbox{\label{classTests2_afe90de3a79c4105e63205cb8f019bbb2}} 
+\index{Tests2@{Tests2}!grid\+Test@{grid\+Test}}
+\index{grid\+Test@{grid\+Test}!Tests2@{Tests2}}
+\subsubsection{grid\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::grid\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests to make sure the \doxyref{Grid}{p.}{classGrid} object is working properly \begin{DoxyReturn}{Returns}
+bool, whether the function runs as expected 
+\end{DoxyReturn}
+
+
+References ant, empty, Grid\+::get\+Cell\+Occupant(), Grid\+::set\+Cell\+Occupant(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_ab24d8d2c2c285d337543a6e9d43ca2b7}} 
+\index{Tests2@{Tests2}!make\+Organism\+Test@{make\+Organism\+Test}}
+\index{make\+Organism\+Test@{make\+Organism\+Test}!Tests2@{Tests2}}
+\subsubsection{make\+Organism\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::make\+Organism\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests to make sure the A\+NT and D\+O\+O\+D\+L\+E\+B\+UG initializers are working properly \begin{DoxyReturn}{Returns}
+bool, whether the function runs as expected 
+\end{DoxyReturn}
+
+
+References doodlebug, empty, Grid\+::get\+Cell\+Occupant(), Doodlebug\+::set\+Pos(), Ant\+::set\+Pos(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Tests2.\+h}\item 
+\textbf{ Tests2.\+cpp}\end{DoxyCompactItemize}

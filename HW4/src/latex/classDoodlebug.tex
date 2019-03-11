@@ -1,0 +1,218 @@
+\section{Doodlebug Class Reference}
+\label{classDoodlebug}\index{Doodlebug@{Doodlebug}}
+
+
+{\ttfamily \#include $<$Doodlebug.\+h$>$}
+
+Inheritance diagram for Doodlebug\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDoodlebug}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Doodlebug} ()
+\item 
+\textbf{ Doodlebug} (int r, int c)
+\item 
+void \textbf{ set\+Pos} (int r, int c, \textbf{ Grid} $\ast$grid)
+\item 
+bool \textbf{ move} (\textbf{ Grid} $\ast$grid)
+\item 
+bool \textbf{ breed} (\textbf{ Grid} $\ast$grid)
+\item 
+bool \textbf{ eat} (\textbf{ Grid} $\ast$grid)
+\item 
+bool \textbf{ die} (\textbf{ Grid} $\ast$grid)
+\item 
+virtual \textbf{ $\sim$\+Doodlebug} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ row} = 0
+\item 
+int \textbf{ col} = 0
+\item 
+int \textbf{ movesteps} = 0
+\item 
+int \textbf{ hunger} = 0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classDoodlebug_afb2796ea39a6ffa13d4f54ac68dd52fc}} 
+\index{Doodlebug@{Doodlebug}!Doodlebug@{Doodlebug}}
+\index{Doodlebug@{Doodlebug}!Doodlebug@{Doodlebug}}
+\subsubsection{Doodlebug()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Doodlebug\+::\+Doodlebug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This is the default constructor It has no parameters and returns nothing 
+
+Referenced by breed().
+
+\mbox{\label{classDoodlebug_a0009927ec98eb6203900af3637fb3e3a}} 
+\index{Doodlebug@{Doodlebug}!Doodlebug@{Doodlebug}}
+\index{Doodlebug@{Doodlebug}!Doodlebug@{Doodlebug}}
+\subsubsection{Doodlebug()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Doodlebug\+::\+Doodlebug (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+Constructor of the \doxyref{Doodlebug}{p.}{classDoodlebug} class 
+\begin{DoxyParams}{Parameters}
+{\em r,the} & staring x position \\
+\hline
+{\em c,the} & starting y position \\
+\hline
+\end{DoxyParams}
+
+
+References col, and row.
+
+\mbox{\label{classDoodlebug_ac318cc9acbd9a3af52348a236070d891}} 
+\index{Doodlebug@{Doodlebug}!````~Doodlebug@{$\sim$\+Doodlebug}}
+\index{````~Doodlebug@{$\sim$\+Doodlebug}!Doodlebug@{Doodlebug}}
+\subsubsection{$\sim$\+Doodlebug()}
+{\footnotesize\ttfamily Doodlebug\+::$\sim$\+Doodlebug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructer Receives and outputs nothing 
+
+\subsection{Member Function Documentation}
+\mbox{\label{classDoodlebug_a6ab3919da6f9404f1f3af05f0bbde13c}} 
+\index{Doodlebug@{Doodlebug}!breed@{breed}}
+\index{breed@{breed}!Doodlebug@{Doodlebug}}
+\subsubsection{breed()}
+{\footnotesize\ttfamily bool Doodlebug\+::breed (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{grid }\end{DoxyParamCaption})}
+
+
+
+References col, doodlebug, Doodlebug(), empty, Grid\+::find\+Adj\+With\+Status(), movesteps, row, Grid\+::set\+Cell\+Occupant(), and set\+Pos().
+
+
+
+Referenced by Tests2\+::doodle\+Breed\+Test(), and Production\+::run\+Production().
+
+\mbox{\label{classDoodlebug_a4dccdd3767544b005027289379dba1ae}} 
+\index{Doodlebug@{Doodlebug}!die@{die}}
+\index{die@{die}!Doodlebug@{Doodlebug}}
+\subsubsection{die()}
+{\footnotesize\ttfamily bool Doodlebug\+::die (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{grid }\end{DoxyParamCaption})}
+
+Kills a \doxyref{Doodlebug}{p.}{classDoodlebug} 
+\begin{DoxyParams}{Parameters}
+{\em Grid$\ast$} & grid, A pointer to the grid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the \doxyref{Doodlebug}{p.}{classDoodlebug} died 
+\end{DoxyReturn}
+
+
+References col, hunger, Grid\+::remove\+Cell\+Occupant(), and row.
+
+
+
+Referenced by Tests2\+::doodle\+Dietest(), and Production\+::run\+Production().
+
+\mbox{\label{classDoodlebug_ab7db14fda4597a0bffbe210d86089f35}} 
+\index{Doodlebug@{Doodlebug}!eat@{eat}}
+\index{eat@{eat}!Doodlebug@{Doodlebug}}
+\subsubsection{eat()}
+{\footnotesize\ttfamily bool Doodlebug\+::eat (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{grid }\end{DoxyParamCaption})}
+
+
+
+References ant, col, doodlebug, Grid\+::find\+Adj\+With\+Status(), hunger, movesteps, Grid\+::remove\+Cell\+Occupant(), row, Grid\+::set\+Cell\+Occupant(), and Organism\+::visited.
+
+
+
+Referenced by Tests2\+::ants\+Die\+From\+Doodle\+Eat\+Test(), Tests2\+::doodle\+Breed\+Test(), Tests2\+::doodle\+Dietest(), and Production\+::run\+Production().
+
+\mbox{\label{classDoodlebug_a4f00da3e326d355a66e936110ce70f15}} 
+\index{Doodlebug@{Doodlebug}!move@{move}}
+\index{move@{move}!Doodlebug@{Doodlebug}}
+\subsubsection{move()}
+{\footnotesize\ttfamily bool Doodlebug\+::move (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{grid }\end{DoxyParamCaption})}
+
+
+
+References col, doodlebug, empty, Grid\+::find\+Adj\+With\+Status(), hunger, movesteps, Grid\+::remove\+Cell\+Occupant(), row, and Grid\+::set\+Cell\+Occupant().
+
+
+
+Referenced by Tests2\+::doodle\+Breed\+Test(), Tests2\+::doodle\+Dietest(), Tests2\+::doodle\+Move\+Test(), and Production\+::run\+Production().
+
+\mbox{\label{classDoodlebug_a804fa94e332594d881a83ce8c4ca1a66}} 
+\index{Doodlebug@{Doodlebug}!set\+Pos@{set\+Pos}}
+\index{set\+Pos@{set\+Pos}!Doodlebug@{Doodlebug}}
+\subsubsection{set\+Pos()}
+{\footnotesize\ttfamily void Doodlebug\+::set\+Pos (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c,  }\item[{\textbf{ Grid} $\ast$}]{grid }\end{DoxyParamCaption})}
+
+This sets the x and y position of the object 
+\begin{DoxyParams}{Parameters}
+{\em int} & r, y position \\
+\hline
+{\em int} & c, x position \\
+\hline
+{\em Grid$\ast$} & grid, a pointer to the grid \\
+\hline
+\end{DoxyParams}
+
+
+References col, doodlebug, row, and Grid\+::set\+Cell\+Occupant().
+
+
+
+Referenced by Tests2\+::ants\+Die\+From\+Doodle\+Eat\+Test(), breed(), Tests2\+::doodle\+Breed\+Test(), Tests2\+::doodle\+Dietest(), Tests2\+::doodle\+Move\+Test(), Tests2\+::make\+Organism\+Test(), and Production\+::run\+Production().
+
+
+
+\subsection{Field Documentation}
+\mbox{\label{classDoodlebug_a6f748f20fbbac04546be634f4b14ff35}} 
+\index{Doodlebug@{Doodlebug}!col@{col}}
+\index{col@{col}!Doodlebug@{Doodlebug}}
+\subsubsection{col}
+{\footnotesize\ttfamily int Doodlebug\+::col = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by breed(), die(), Doodlebug(), eat(), move(), and set\+Pos().
+
+\mbox{\label{classDoodlebug_adf01154783c8192c8cc7ab194f22e542}} 
+\index{Doodlebug@{Doodlebug}!hunger@{hunger}}
+\index{hunger@{hunger}!Doodlebug@{Doodlebug}}
+\subsubsection{hunger}
+{\footnotesize\ttfamily int Doodlebug\+::hunger = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by die(), eat(), and move().
+
+\mbox{\label{classDoodlebug_a79e284a32b96c4af266a8fdb474d45a6}} 
+\index{Doodlebug@{Doodlebug}!movesteps@{movesteps}}
+\index{movesteps@{movesteps}!Doodlebug@{Doodlebug}}
+\subsubsection{movesteps}
+{\footnotesize\ttfamily int Doodlebug\+::movesteps = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by breed(), eat(), and move().
+
+\mbox{\label{classDoodlebug_a4ab3657542999f3f83988ff1e113d477}} 
+\index{Doodlebug@{Doodlebug}!row@{row}}
+\index{row@{row}!Doodlebug@{Doodlebug}}
+\subsubsection{row}
+{\footnotesize\ttfamily int Doodlebug\+::row = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by breed(), die(), Doodlebug(), eat(), move(), and set\+Pos().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Doodlebug.\+h}\item 
+\textbf{ Doodlebug.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\section{Production Class Reference}
+\label{classProduction}\index{Production@{Production}}
+
+
+{\ttfamily \#include $<$Production.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Production} (int argc, char $\ast$argv[$\,$])
+\item 
+bool \textbf{ run\+Production} ()
+\item 
+virtual \textbf{ $\sim$\+Production} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classProduction_a24439558b7672feaea80dc0ab1b53ff2}} 
+\index{Production@{Production}!Production@{Production}}
+\index{Production@{Production}!Production@{Production}}
+\subsubsection{Production()}
+{\footnotesize\ttfamily Production\+::\+Production (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv[$\,$] }\end{DoxyParamCaption})}
+
+Constructor for the game controller 
+\begin{DoxyParams}{Parameters}
+{\em int} & argc, the length of argv[] \\
+\hline
+{\em char$\ast$} & argv[], an array of arguments passed into main \\
+\hline
+\end{DoxyParams}
+
+
+References \+\_\+pause, grid\+Size, num\+Of\+Ants, num\+Of\+Bugs, seed, and timesteps\+Left.
+
+
+
+Referenced by main().
+
+\mbox{\label{classProduction_ab5b3060f9e0a2bc189844e426d693dab}} 
+\index{Production@{Production}!````~Production@{$\sim$\+Production}}
+\index{````~Production@{$\sim$\+Production}!Production@{Production}}
+\subsubsection{$\sim$\+Production()}
+{\footnotesize\ttfamily Production\+::$\sim$\+Production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructer Receives and outputs nothing 
+
+Referenced by main().
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classProduction_a1d66853eafae2580089eff44f12f07ba}} 
+\index{Production@{Production}!run\+Production@{run\+Production}}
+\index{run\+Production@{run\+Production}!Production@{Production}}
+\subsubsection{run\+Production()}
+{\footnotesize\ttfamily bool Production\+::run\+Production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+runs the program, i.\+e. the game control \begin{DoxyReturn}{Returns}
+bool, if the game completed 
+\end{DoxyReturn}
+
+
+References \+\_\+pause, ant, Doodlebug\+::breed(), Ant\+::breed(), Doodlebug\+::die(), doodlebug, Doodlebug\+::eat(), empty, Grid\+::get\+Cell\+Occupant(), Grid\+::get\+Cell\+Pointer(), grid\+Size, Ant\+::move(), Doodlebug\+::move(), num\+Of\+Ants, num\+Of\+Bugs, Grid\+::print\+Grid(), seed, Doodlebug\+::set\+Pos(), Ant\+::set\+Pos(), timesteps\+Left, Organism\+::visited, and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by main().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Production.\+h}\item 
+\textbf{ Production.\+cpp}\end{DoxyCompactItemize}
