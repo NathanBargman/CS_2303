@@ -1,0 +1,304 @@
+\section{production.\+h File Reference}
+\label{production_8h}\index{production.\+h@{production.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ production} (int argc, char $\ast$argv[$\,$])
+\item 
+void \textbf{ Play\+One} (unsigned int nr, unsigned int nc, char $\ast$Old, char $\ast$New)
+\item 
+void \textbf{ usage} (void)
+\item 
+char \textbf{ get\+Letter} (int row, int col, int n\+Cols, char $\ast$Old)
+\item 
+int \textbf{ How\+Many\+Neighbors} (int row, int col, int n\+Rows, int n\+Cols, char $\ast$Old)
+\item 
+void \textbf{ read\+File\+Into\+Array} (int n\+Rows, int n\+Cols, int how\+Many\+Lines\+In\+File, int maximum\+Width, char $\ast$ar\+\_\+p, F\+I\+LE $\ast$fp)
+\item 
+int \textbf{ generate} (int gens, int n\+Rows, int n\+Cols, char $\ast$old\+\_\+p, char $\ast$new\+\_\+p, char $\ast$other\+\_\+p, char print, char pause)
+\item 
+bool \textbf{ anyX} (char $\ast$arr, int n\+Rows, int n\+Cols)
+\item 
+bool \textbf{ same\+Content} (char $\ast$one\+\_\+p, char $\ast$another\+\_\+p, int n\+Rows, int n\+Cols)
+\item 
+void \textbf{ print\+This} (int n\+Rows, int n\+Cols, char $\ast$old\+\_\+p)
+\item 
+void \textbf{ swap\+Pntr} (char $\ast$$\ast$other\+\_\+pl, char $\ast$$\ast$old\+\_\+p, char $\ast$$\ast$new\+\_\+p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{production_8h_a85f4ceb7eddb00ab9989daf800a74d3f}} 
+\index{production.\+h@{production.\+h}!anyX@{anyX}}
+\index{anyX@{anyX}!production.\+h@{production.\+h}}
+\subsubsection{any\+X()}
+{\footnotesize\ttfamily bool anyX (\begin{DoxyParamCaption}\item[{char $\ast$}]{arr,  }\item[{int}]{n\+Rows,  }\item[{int}]{n\+Cols }\end{DoxyParamCaption})}
+
+anyX is a helper function to find out if the array has any X chars 
+\begin{DoxyParams}{Parameters}
+{\em int} & n\+Rows, the number of rows in the game \\
+\hline
+{\em int} & n\+Cols, the number of columns in the game \\
+\hline
+{\em char$\ast$} & arr, the pointer to the target array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the array contains \textquotesingle{}x\textquotesingle{} False if not 
+\end{DoxyReturn}
+
+
+Referenced by generate().
+
+\mbox{\label{production_8h_a7986ca2f4339fb9c9d88ac88dff0f34d}} 
+\index{production.\+h@{production.\+h}!generate@{generate}}
+\index{generate@{generate}!production.\+h@{production.\+h}}
+\subsubsection{generate()}
+{\footnotesize\ttfamily int generate (\begin{DoxyParamCaption}\item[{int}]{gens,  }\item[{int}]{n\+Rows,  }\item[{int}]{n\+Cols,  }\item[{char $\ast$}]{old\+\_\+p,  }\item[{char $\ast$}]{new\+\_\+p,  }\item[{char $\ast$}]{other\+\_\+p,  }\item[{char}]{print,  }\item[{char}]{pause }\end{DoxyParamCaption})}
+
+generate runs the game for the designated amount of rounds and checks if the game should end 
+\begin{DoxyParams}{Parameters}
+{\em int} & gens, the number rounds the game will try and run for \\
+\hline
+{\em int} & n\+Rows, the number of rows in the game \\
+\hline
+{\em int} & n\+Cols, the number of columns in the game \\
+\hline
+{\em char$\ast$} & old\+\_\+p, the pointer to the old array \\
+\hline
+{\em char$\ast$} & new\+\_\+p, the pointer to the new array \\
+\hline
+{\em char$\ast$} & other\+\_\+p, the pointer to the third array \\
+\hline
+{\em char} & print, character to decide if the game should print after each generation (\textquotesingle{}y\textquotesingle{} for yes, \textquotesingle{}n\textquotesingle{} for no) \\
+\hline
+{\em char} & pause, character to decide of the game should pause after each generation (\textquotesingle{}y\textquotesingle{} for yes, \textquotesingle{}n\textquotesingle{} for no) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of rounds the game ran 
+\end{DoxyReturn}
+
+
+References any\+X(), Play\+One(), print\+This(), same\+Content(), and swap\+Pntr().
+
+
+
+Referenced by production().
+
+\mbox{\label{production_8h_adc602acdc7ecd4199ad2b30ac03feb52}} 
+\index{production.\+h@{production.\+h}!get\+Letter@{get\+Letter}}
+\index{get\+Letter@{get\+Letter}!production.\+h@{production.\+h}}
+\subsubsection{get\+Letter()}
+{\footnotesize\ttfamily char get\+Letter (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{n\+Cols,  }\item[{char $\ast$}]{Old }\end{DoxyParamCaption})}
+
+get\+Letter gets the char at the given position in the given array 
+\begin{DoxyParams}{Parameters}
+{\em int} & row, row of desired char \\
+\hline
+{\em int} & col, column of desired char \\
+\hline
+{\em int} & n\+Cols, the number of columns in the game \\
+\hline
+{\em char$\ast$} & Old, the array to get the character from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the char at the given position in the given array 
+\end{DoxyReturn}
+
+
+Referenced by How\+Many\+Neighbors(), Play\+One(), print\+This(), and same\+Content().
+
+\mbox{\label{production_8h_ab629e8f86e0183efbb59ef24422116cb}} 
+\index{production.\+h@{production.\+h}!How\+Many\+Neighbors@{How\+Many\+Neighbors}}
+\index{How\+Many\+Neighbors@{How\+Many\+Neighbors}!production.\+h@{production.\+h}}
+\subsubsection{How\+Many\+Neighbors()}
+{\footnotesize\ttfamily int How\+Many\+Neighbors (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{n\+Rows,  }\item[{int}]{n\+Cols,  }\item[{char $\ast$}]{Old }\end{DoxyParamCaption})}
+
+How\+Many\+Neighbors is a helper function to find out how many Xs are adjecent 
+\begin{DoxyParams}{Parameters}
+{\em int} & row, row of desired char \\
+\hline
+{\em int} & col, column of desired char \\
+\hline
+{\em int} & n\+Rows, the number of rows in the game \\
+\hline
+{\em int} & n\+Cols, the number of columns in the game \\
+\hline
+{\em char$\ast$} & Old, the array to compare the character from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of Xs that are next to the given position in any cardinal direction 
+\end{DoxyReturn}
+
+
+References get\+Letter().
+
+
+
+Referenced by Play\+One().
+
+\mbox{\label{production_8h_af5b14d1dae61b5bee7bc0c3aa0dea79e}} 
+\index{production.\+h@{production.\+h}!Play\+One@{Play\+One}}
+\index{Play\+One@{Play\+One}!production.\+h@{production.\+h}}
+\subsubsection{Play\+One()}
+{\footnotesize\ttfamily void Play\+One (\begin{DoxyParamCaption}\item[{unsigned int}]{nr,  }\item[{unsigned int}]{nc,  }\item[{char $\ast$}]{Old,  }\item[{char $\ast$}]{New }\end{DoxyParamCaption})}
+
+Play\+One carries out one generation 
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int nr, the number of rows in the petri dish \\
+\hline
+{\em unsigned} & int nc, the number of columns in the petri dish \\
+\hline
+{\em char$\ast$} & Old, the location of the upper left of starting petri dish \\
+\hline
+{\em char$\ast$} & New, the location of the upper left of the ending petri dish \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+There is none, because results are in New array 
+\end{DoxyReturn}
+
+
+References get\+Letter(), and How\+Many\+Neighbors().
+
+
+
+Referenced by generate(), and test\+Play\+One().
+
+\mbox{\label{production_8h_ab73ab2c09c3d3d34fa5239433d488ff9}} 
+\index{production.\+h@{production.\+h}!print\+This@{print\+This}}
+\index{print\+This@{print\+This}!production.\+h@{production.\+h}}
+\subsubsection{print\+This()}
+{\footnotesize\ttfamily void print\+This (\begin{DoxyParamCaption}\item[{int}]{n\+Rows,  }\item[{int}]{n\+Cols,  }\item[{char $\ast$}]{old\+\_\+p }\end{DoxyParamCaption})}
+
+print\+This prints an array 
+\begin{DoxyParams}{Parameters}
+{\em int} & n\+Rows, the number of rows in the game \\
+\hline
+{\em int} & n\+Cols, the number of columns in the game \\
+\hline
+{\em char$\ast$} & old\+\_\+p, the pointer to the target array \\
+\hline
+\end{DoxyParams}
+
+
+References get\+Letter().
+
+
+
+Referenced by generate(), and read\+File\+Into\+Array().
+
+\mbox{\label{production_8h_a9f67b51c42a54745557e7a2c9c07c46f}} 
+\index{production.\+h@{production.\+h}!production@{production}}
+\index{production@{production}!production.\+h@{production.\+h}}
+\subsubsection{production()}
+{\footnotesize\ttfamily bool production (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv[$\,$] }\end{DoxyParamCaption})}
+
+Production begins the program and initializes the generations 
+\begin{DoxyParams}{Parameters}
+{\em int} & argc, the number of arguments in the command line call. Must be greater than 5. \\
+\hline
+{\em char$\ast$} & argv[], the array of the passed arguments in the command line call \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if production completed, False if otherwise 
+\end{DoxyReturn}
+
+
+References generate(), read\+File\+Into\+Array(), and usage().
+
+
+
+Referenced by main().
+
+\mbox{\label{production_8h_a0acda6eca9bfeb1059c53811d22b7996}} 
+\index{production.\+h@{production.\+h}!read\+File\+Into\+Array@{read\+File\+Into\+Array}}
+\index{read\+File\+Into\+Array@{read\+File\+Into\+Array}!production.\+h@{production.\+h}}
+\subsubsection{read\+File\+Into\+Array()}
+{\footnotesize\ttfamily void read\+File\+Into\+Array (\begin{DoxyParamCaption}\item[{int}]{n\+Rows,  }\item[{int}]{n\+Cols,  }\item[{int}]{how\+Many\+Lines\+In\+File,  }\item[{int}]{maximum\+Width,  }\item[{char $\ast$}]{ar\+\_\+p,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+read\+File\+Into\+Array turns the file into an array 
+\begin{DoxyParams}{Parameters}
+{\em int} & n\+Rows, the number of rows in the game \\
+\hline
+{\em int} & n\+Cols, the number of columns in the game \\
+\hline
+{\em int} & how\+Many\+Lines\+In\+File, the number of lines in the original file \\
+\hline
+{\em int} & maximum\+Width, the number of characters long the original file \\
+\hline
+{\em char$\ast$} & ar\+\_\+p, the array to put the characters from the file into \\
+\hline
+{\em F\+I\+L\+E$\ast$} & fp, the file designated as the starting game board \\
+\hline
+\end{DoxyParams}
+
+
+References print\+This().
+
+
+
+Referenced by production().
+
+\mbox{\label{production_8h_a6bc14537b7dc8361ace9f0ee6aa49440}} 
+\index{production.\+h@{production.\+h}!same\+Content@{same\+Content}}
+\index{same\+Content@{same\+Content}!production.\+h@{production.\+h}}
+\subsubsection{same\+Content()}
+{\footnotesize\ttfamily bool same\+Content (\begin{DoxyParamCaption}\item[{char $\ast$}]{one\+\_\+p,  }\item[{char $\ast$}]{another\+\_\+p,  }\item[{int}]{n\+Rows,  }\item[{int}]{n\+Cols }\end{DoxyParamCaption})}
+
+same\+Content is a helper function that compares two arrays 
+\begin{DoxyParams}{Parameters}
+{\em int} & n\+Rows, the number of rows in the game \\
+\hline
+{\em int} & n\+Cols, the number of columns in the game \\
+\hline
+{\em char$\ast$} & one\+\_\+p, the pointer to the first target array \\
+\hline
+{\em char$\ast$} & another\+\_\+p, the pointer to the second target array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the arrays are identical, False if otherwise 
+\end{DoxyReturn}
+
+
+References get\+Letter().
+
+
+
+Referenced by generate().
+
+\mbox{\label{production_8h_a9247d0ecdd20d627d6bebc81c222893a}} 
+\index{production.\+h@{production.\+h}!swap\+Pntr@{swap\+Pntr}}
+\index{swap\+Pntr@{swap\+Pntr}!production.\+h@{production.\+h}}
+\subsubsection{swap\+Pntr()}
+{\footnotesize\ttfamily void swap\+Pntr (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{other\+\_\+p,  }\item[{char $\ast$$\ast$}]{old\+\_\+p,  }\item[{char $\ast$$\ast$}]{new\+\_\+p }\end{DoxyParamCaption})}
+
+swap\+Pntr plays musical chairs with the pointers to continue the game and swap the arrays A, B and C 
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$$\ast$} & other\+\_\+p, the pointer to the array pointer controlling the game \\
+\hline
+{\em char$\ast$$\ast$} & old\+\_\+p, the pointer to the array pointer controlling the game \\
+\hline
+{\em char$\ast$$\ast$} & new\+\_\+p, the pointer to the array pointer controlling the game \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by generate().
+
+\mbox{\label{production_8h_ae8605e2b78cd4a81b6c6b5c30cb7366a}} 
+\index{production.\+h@{production.\+h}!usage@{usage}}
+\index{usage@{usage}!production.\+h@{production.\+h}}
+\subsubsection{usage()}
+{\footnotesize\ttfamily void usage (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Referenced by production().
+
