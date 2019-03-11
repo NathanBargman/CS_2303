@@ -15,3 +15,4 @@ HW3 : Strings (C) |
 Recreates some of the basic str and strn functions in addition to creating copy and deep copy functions. 
 
 HW4 : Ants & Doodlebugs (C++) | 
+Implements a simple 2D predator-prey simulation using derived classes and virtual functions.
