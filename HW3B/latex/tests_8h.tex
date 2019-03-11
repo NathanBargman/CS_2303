@@ -1,0 +1,143 @@
+\section{tests.\+h File Reference}
+\label{tests_8h}\index{tests.\+h@{tests.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}production.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ tests} (void)
+\item 
+bool \textbf{ test\+Print\+Employee} (void)
+\item 
+bool \textbf{ test\+Make\+Employee} ()
+\item 
+bool \textbf{ test\+Make\+Rnd\+And\+Print} ()
+\item 
+bool \textbf{ test\+Shallow\+Copy} ()
+\item 
+bool \textbf{ test\+Deallocate} ()
+\item 
+bool \textbf{ test\+Deep\+Copy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{tests_8h_ae85c3269923d781f7b3791fc48b6c12f}} 
+\index{tests.\+h@{tests.\+h}!test\+Deallocate@{test\+Deallocate}}
+\index{test\+Deallocate@{test\+Deallocate}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Deallocate()}
+{\footnotesize\ttfamily bool test\+Deallocate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Test the destruct\+Array function, it is either pass or error. \begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+
+
+References destruct\+Array(), and make\+Random\+Array().
+
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_acb893e2db5c22056499954dc9e7c839f}} 
+\index{tests.\+h@{tests.\+h}!test\+Deep\+Copy@{test\+Deep\+Copy}}
+\index{test\+Deep\+Copy@{test\+Deep\+Copy}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Deep\+Copy()}
+{\footnotesize\ttfamily bool test\+Deep\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Test the make\+Deep\+Copy fuction \begin{DoxyReturn}{Returns}
+true. The only way to tell if it succeeds is to look at the output 
+\end{DoxyReturn}
+
+
+References make\+Deep\+Copy(), make\+Random\+Array(), and print\+All\+Employee().
+
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_ae4ba22f3bf16452487efa177cce283e3}} 
+\index{tests.\+h@{tests.\+h}!test\+Make\+Employee@{test\+Make\+Employee}}
+\index{test\+Make\+Employee@{test\+Make\+Employee}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Make\+Employee()}
+{\footnotesize\ttfamily bool test\+Make\+Employee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Test the make \doxyref{Employee()}{p.}{structEmployee} function by making an employee with known data and printing it. \begin{DoxyReturn}{Returns}
+true. The only way to tell if it succeeds is to look at the output. 
+\end{DoxyReturn}
+
+
+References make\+Employee(), and print\+Employee().
+
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_a45aede28aafadf108b86e65bc35a9d8d}} 
+\index{tests.\+h@{tests.\+h}!test\+Make\+Rnd\+And\+Print@{test\+Make\+Rnd\+And\+Print}}
+\index{test\+Make\+Rnd\+And\+Print@{test\+Make\+Rnd\+And\+Print}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Make\+Rnd\+And\+Print()}
+{\footnotesize\ttfamily bool test\+Make\+Rnd\+And\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Test the make\+Rnd\+Employee and print\+Employee functions \begin{DoxyReturn}{Returns}
+true. The only way to tell if it succeeds is to look at the output 
+\end{DoxyReturn}
+
+
+References make\+Random\+Array(), and print\+All\+Employee().
+
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_a8af52635f490b4f89a0239c9c12910d5}} 
+\index{tests.\+h@{tests.\+h}!test\+Print\+Employee@{test\+Print\+Employee}}
+\index{test\+Print\+Employee@{test\+Print\+Employee}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Print\+Employee()}
+{\footnotesize\ttfamily bool test\+Print\+Employee (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Test the \doxyref{print\+Employee()}{p.}{mystruct_8c_acff9aa9547982f1b0effbd6f302e325e} function by creating a known struct and printing it. \begin{DoxyReturn}{Returns}
+true. The only way to tell if it succeeds is to look at the output. 
+\end{DoxyReturn}
+
+
+References Employee\+::birth\+\_\+year, M\+A\+X\+\_\+\+N\+A\+ME, Employee\+::name, print\+Employee(), and Employee\+::start\+\_\+year.
+
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_a5e6e6e78df62797046c9ea173550a68a}} 
+\index{tests.\+h@{tests.\+h}!tests@{tests}}
+\index{tests@{tests}!tests.\+h@{tests.\+h}}
+\subsubsection{tests()}
+{\footnotesize\ttfamily bool tests (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Used to test the functionality of this code \begin{DoxyReturn}{Returns}
+true if the program ran as intended 
+\end{DoxyReturn}
+
+
+References test\+Deallocate(), test\+Deep\+Copy(), test\+Make\+Employee(), test\+Make\+Rnd\+And\+Print(), test\+Print\+Employee(), and test\+Shallow\+Copy().
+
+
+
+Referenced by main().
+
+\mbox{\label{tests_8h_a821417980a46e7d5949d2b730f7e5d1e}} 
+\index{tests.\+h@{tests.\+h}!test\+Shallow\+Copy@{test\+Shallow\+Copy}}
+\index{test\+Shallow\+Copy@{test\+Shallow\+Copy}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Shallow\+Copy()}
+{\footnotesize\ttfamily bool test\+Shallow\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Test the make\+Shallow\+Copy function \begin{DoxyReturn}{Returns}
+true. The only way to tell if it succeeds is to look at the output 
+\end{DoxyReturn}
+
+
+References make\+Random\+Array(), make\+Shallow\+Copy(), and print\+All\+Employee().
+
+
+
+Referenced by tests().
+
