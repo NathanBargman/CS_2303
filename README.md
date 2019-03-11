@@ -9,7 +9,9 @@ HW1 : Calender (C) |
 Creates a compleat formated calender for the given year.
 
 HW2 : Game of Life (C) | 
-Repicated the "Game of Life" on a finite grid. http://www.math.com/students/wonders/life/life.html
+Repicates the "Game of Life" on a finite grid. http://www.math.com/students/wonders/life/life.html
 
 HW3 : Strings (C) | 
-Recreate some of the basic str and strn functions in addition to creating copy and deep copy functions. 
+Recreates some of the basic str and strn functions in addition to creating copy and deep copy functions. 
+
+HW4 : Ants & Doodlebugs (C++) | 
