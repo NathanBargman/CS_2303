@@ -1,0 +1,169 @@
+\section{mystring.\+h File Reference}
+\label{mystring_8h}\index{mystring.\+h@{mystring.\+h}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \textbf{ mystrlen1} (const char $\ast$s)
+\item 
+size\+\_\+t \textbf{ mystrlen2} (const char $\ast$s)
+\item 
+char $\ast$ \textbf{ mystrdup} (char $\ast$s)
+\item 
+char $\ast$ \textbf{ mystrcpy} (char $\ast$dest, char $\ast$src)
+\item 
+char $\ast$ \textbf{ mystrcat} (char $\ast$dest, char $\ast$src)
+\item 
+char $\ast$ \textbf{ mystrncpy} (char $\ast$dest, char $\ast$src, size\+\_\+t n)
+\item 
+char $\ast$ \textbf{ mystrncat} (char $\ast$dest, char $\ast$src, size\+\_\+t n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{mystring_8h_a68e51a014c7210b524d657b665d09db8}} 
+\index{mystring.\+h@{mystring.\+h}!mystrcat@{mystrcat}}
+\index{mystrcat@{mystrcat}!mystring.\+h@{mystring.\+h}}
+\subsubsection{mystrcat()}
+{\footnotesize\ttfamily char$\ast$ mystrcat (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{char $\ast$}]{src }\end{DoxyParamCaption})}
+
+Appends the second string into the provided address\textquotesingle{}s string 
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & dest, the pointer to the first string \\
+\hline
+{\em char$\ast$} & src, the string to append \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$, a copy of the dest pointer 
+\end{DoxyReturn}
+
+
+References mystrcpy(), and mystrlen1().
+
+
+
+Referenced by test\+Mystrcat().
+
+\mbox{\label{mystring_8h_acce8ca34ad672c764b2817e5f91707d6}} 
+\index{mystring.\+h@{mystring.\+h}!mystrcpy@{mystrcpy}}
+\index{mystrcpy@{mystrcpy}!mystring.\+h@{mystring.\+h}}
+\subsubsection{mystrcpy()}
+{\footnotesize\ttfamily char$\ast$ mystrcpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{char $\ast$}]{src }\end{DoxyParamCaption})}
+
+Copies the second string into the provided address 
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & dest, the pointer to the destination for the string \\
+\hline
+{\em char$\ast$} & src, the string to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$, a copy of the dest pointer 
+\end{DoxyReturn}
+
+
+Referenced by mystrcat(), and test\+Mystrcpy().
+
+\mbox{\label{mystring_8h_afd0ffd16b17423165bbba7ccadac9375}} 
+\index{mystring.\+h@{mystring.\+h}!mystrdup@{mystrdup}}
+\index{mystrdup@{mystrdup}!mystring.\+h@{mystring.\+h}}
+\subsubsection{mystrdup()}
+{\footnotesize\ttfamily char$\ast$ mystrdup (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+Duplicates a character string into a freshly-\/allocated block of memory. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to duplicate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the new string. N\+U\+LL if unable to allocate memory, errno holds the error code. 
+\end{DoxyReturn}
+
+
+Referenced by test\+Mystrdup().
+
+\mbox{\label{mystring_8h_a71f9f1095f41990d202157923cfe578a}} 
+\index{mystring.\+h@{mystring.\+h}!mystrlen1@{mystrlen1}}
+\index{mystrlen1@{mystrlen1}!mystring.\+h@{mystring.\+h}}
+\subsubsection{mystrlen1()}
+{\footnotesize\ttfamily size\+\_\+t mystrlen1 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+Calculate the length of the string, excluding the terminating null byte (\textquotesingle{}\textbackslash{}0\textquotesingle{}) 
+\begin{DoxyParams}{Parameters}
+{\em const} & char$\ast$ s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of characters in the string pointed to by s 
+\end{DoxyReturn}
+
+
+Referenced by mystrcat(), mystrncat(), and test\+Mystrlen1().
+
+\mbox{\label{mystring_8h_a0553e98c4213b02262ce36a73cc9b088}} 
+\index{mystring.\+h@{mystring.\+h}!mystrlen2@{mystrlen2}}
+\index{mystrlen2@{mystrlen2}!mystring.\+h@{mystring.\+h}}
+\subsubsection{mystrlen2()}
+{\footnotesize\ttfamily size\+\_\+t mystrlen2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+Calculate the length of the string excluding the terminating null byte (\textquotesingle{}\textbackslash{}0\textquotesingle{}) 
+\begin{DoxyParams}{Parameters}
+{\em const} & char$\ast$ s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of characters in the string pointed to by s 
+\end{DoxyReturn}
+
+
+Referenced by test\+Mystrlen2().
+
+\mbox{\label{mystring_8h_ae52d8f5cb626d9641dbdca518a054876}} 
+\index{mystring.\+h@{mystring.\+h}!mystrncat@{mystrncat}}
+\index{mystrncat@{mystrncat}!mystring.\+h@{mystring.\+h}}
+\subsubsection{mystrncat()}
+{\footnotesize\ttfamily char$\ast$ mystrncat (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{char $\ast$}]{src,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+Appends the second string into the provided address\textquotesingle{}s string, but no more than n character my be appended A N\+U\+LL terminator is added to the end, so the proper size of dest should be the length of the two strings + 1 
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & dest, the pointer to the first string \\
+\hline
+{\em char$\ast$} & src, the string to append \\
+\hline
+{\em size\+\_\+t} & n, the number of character to be appended \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$, a copy of the dest pointer 
+\end{DoxyReturn}
+
+
+References mystrlen1(), and mystrncpy().
+
+
+
+Referenced by test\+Mystrncat().
+
+\mbox{\label{mystring_8h_abcd51c77fb7a0ccc66dca468bc101ed5}} 
+\index{mystring.\+h@{mystring.\+h}!mystrncpy@{mystrncpy}}
+\index{mystrncpy@{mystrncpy}!mystring.\+h@{mystring.\+h}}
+\subsubsection{mystrncpy()}
+{\footnotesize\ttfamily char$\ast$ mystrncpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{char $\ast$}]{src,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+Copies the second string into the provided address for each index of n Ex\+: If n is 6 then 6 character will be copied. If the string to copy is too short the rest of the indexes will be 0. If the string is too long it will be cut off. 
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & dest, the pointer to the destination for the string \\
+\hline
+{\em char$\ast$} & src, the string to copy \\
+\hline
+{\em size\+\_\+t} & n, the amount of character to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$, a copy of the dest pointer 
+\end{DoxyReturn}
+
+
+Referenced by mystrncat(), and test\+Mystrncpy().
+
